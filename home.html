@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the South Asian University virtual campus in New Delhi.">
+  <title>SAU Virtual Campus | South Asian University</title>
+
+  <style>
+    :root {
+      --navy: #102a43;
+      --blue: #176b87;
+      --gold: #e4ad42;
+      --cream: #f7f5ef;
+      --text: #263746;
+      --muted: #657582;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1160px, 90%);
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: var(--navy);
+      color: var(--white);
+      font-size: 0.84rem;
+    }
+
+    .topbar-inner {
+      min-height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .topbar a:hover {
+      color: var(--gold);
+    }
+
+    header {
+      position: sticky;
+      z-index: 10;
+      top: 0;
+      background: var(--white);
+      box-shadow: 0 3px 14px rgb(16 42 67 / 8%);
+    }
+
+    .navbar {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      color: var(--navy);
+    }
+
+    .brand-mark {
+      width: 49px;
+      height: 49px;
+      display: grid;
+      place-items: center;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      color: var(--blue);
+      font-size: 1.15rem;
+      font-weight: 800;
+    }
+
+    .brand-name {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .brand-subtitle {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.74rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #394b59;
+      font-size: 0.94rem;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .nav-links .nav-button {
+      padding: 10px 17px;
+      border-radius: 5px;
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .nav-links .nav-button:hover {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .hero {
+      min-height: 590px;
+      display: grid;
+      align-items: center;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgb(9 31 49 / 82%) 0%, rgb(9 31 49 / 55%) 48%, rgb(9 31 49 / 12%) 100%),
+        url("https://upload.wikimedia.org/wikipedia/commons/5/57/South_asian_university_campus_photo.png") center 48% / cover;
+      color: var(--white);
+    }
+
+    .hero-content {
+      max-width: 650px;
+      padding: 82px 0;
+    }
+
+    .eyebrow {
+      margin-bottom: 14px;
+      color: #f2c86e;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: clamp(2.7rem, 6vw, 5rem);
+      line-height: 1.08;
+    }
+
+    .hero p {
+      max-width: 590px;
+      margin-bottom: 30px;
+      color: #edf2f5;
+      font-size: 1.1rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 21px;
+      border: 2px solid var(--gold);
+      border-radius: 5px;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: transparent;
+      color: var(--white);
+    }
+
+    .section {
+      padding: 78px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+    .section-heading .eyebrow {
+      margin-bottom: 8px;
+      color: var(--blue);
+    }
+
+    .section-heading h2 {
+      margin-bottom: 12px;
+      color: var(--navy);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.2;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .overview {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .overview-photo {
+      min-height: 350px;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 16px 16px 0 #e9d6ad;
+    }
+
+    .overview-photo img {
+      height: 100%;
+      min-height: 350px;
+    }
+
+    .overview-copy h2 {
+      margin-bottom: 16px;
+      color: var(--navy);
+      font-size: 2.25rem;
+      line-height: 1.2;
+    }
+
+    .overview-copy p {
+      margin-bottom: 14px;
+      color: var(--muted);
+    }
+
+    .text-link {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .text-link:hover {
+      color: var(--navy);
+    }
+
+    .locations-section {
+      background: #edf2f3;
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .location-card {
+      overflow: hidden;
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 8px 24px rgb(16 42 67 / 8%);
+    }
+
+    .location-card img {
+      height: 220px;
+      background: #d8e0e3;
+    }
+
+    .location-card-content {
+      padding: 22px;
+    }
+
+    .location-card h3 {
+      margin-bottom: 7px;
+      color: var(--navy);
+      font-size: 1.35rem;
+    }
+
+    .location-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .links-section {
+      padding-bottom: 88px;
+    }
+
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .section-link {
+      min-height: 125px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+      border-left: 4px solid var(--gold);
+      border-radius: 5px;
+      background: var(--white);
+      box-shadow: 0 5px 18px rgb(16 42 67 / 6%);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .section-link:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 24px rgb(16 42 67 / 12%);
+    }
+
+    .section-link strong {
+      margin-bottom: 5px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.2rem;
+    }
+
+    .section-link span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer {
+      padding: 34px 0;
+      background: var(--navy);
+      color: #d9e2e8;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .footer-inner p {
+      font-size: 0.9rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    @media (max-width: 900px) {
+      .navbar {
+        padding: 15px 0;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 20px;
+      }
+
+      .overview {
+        grid-template-columns: 1fr;
+      }
+
+      .location-grid,
+      .link-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .topbar-inner {
+        padding: 8px 0;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .brand-name {
+        font-size: 1.05rem;
+      }
+
+      .nav-links {
+        gap: 10px 14px;
+      }
+
+      .nav-links a {
+        font-size: 0.85rem;
+      }
+
+      .hero {
+        min-height: 520px;
+        background-position: 58% center;
+      }
+
+      .hero-content {
+        padding: 65px 0;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .location-grid,
+      .link-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>South Asian University · New Delhi, India</span>
+      <a href="https://sau.int/" target="_blank" rel="noopener">Visit the official SAU website ↗</a>
+    </div>
+  </div>
+
+  <header>
+    <nav class="container navbar" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="South Asian University Virtual Campus home">
+        <span class="brand-mark" aria-hidden="true">SAU</span>
+        <span>
+          <span class="brand-name">South Asian University</span>
+          <span class="brand-subtitle">Virtual Campus · New Delhi</span>
+        </span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#overview">About SAU</a></li>
+        <li><a href="#locations">Campus Tour</a></li>
+        <li><a href="#sections">Explore</a></li>
+        <li><a class="nav-button" href="https://sau.int/" target="_blank" rel="noopener">Official Website</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <p class="eyebrow">One university · Many perspectives</p>
+          <h1>Welcome to South Asian University</h1>
+          <p>
+            Step inside SAU’s virtual campus and discover a shared academic
+            community connecting students, ideas and cultures from across South Asia.
+          </p>
+          <a class="button" href="#locations">Begin the Campus Tour</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="container overview">
+        <div class="overview-photo">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/57/South_asian_university_campus_photo.png"
+            alt="South Asian University campus in New Delhi"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="overview-copy">
+          <p class="eyebrow">Discover SAU</p>
+          <h2>A meeting place for South Asia</h2>
+          <p>
+            South Asian University is an international university established
+            by the member countries of the South Asian Association for Regional
+            Cooperation. Its diverse community brings together students and
+            scholars from across the region.
+          </p>
+          <p>
+            This virtual campus is your starting point for exploring the
+            university’s academic spaces, student life and shared community.
+          </p>
+          <a class="text-link" href="https://sau.int/" target="_blank" rel="noopener">
+            Learn more about SAU ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section locations-section" id="locations">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Take a closer look</p>
+          <h2>Featured Campus Locations</h2>
+          <p>Explore the places where learning, research and campus life come together.</p>
+        </div>
+
+        <div class="location-grid">
+          <article class="location-card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/5/57/South_asian_university_campus_photo.png"
+              alt="View of the South Asian University campus"
+              loading="lazy"
+            >
+            <div class="location-card-content">
+              <h3>Academic Campus</h3>
+              <p>Explore the university’s learning spaces and academic environment.</p>
+            </div>
+          </article>
+
+          <article class="location-card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/South_asian_university_campus_photo.png/1280px-South_asian_university_campus_photo.png"
+              alt="South Asian University campus grounds"
+              loading="lazy"
+            >
+            <div class="location-card-content">
+              <h3>Campus Grounds</h3>
+              <p>Get a feel for the surroundings and shared spaces across campus.</p>
+            </div>
+          </article>
+
+          <article class="location-card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Students_of_South_Asian_University%2C_New_Delhi.JPG/1280px-Students_of_South_Asian_University%2C_New_Delhi.JPG"
+              alt="Students celebrating together at South Asian University"
+              loading="lazy"
+            >
+            <div class="location-card-content">
+              <h3>Student Community</h3>
+              <p>Meet a vibrant community shaped by cultures from across South Asia.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section links-section" id="sections">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Continue exploring</p>
+          <h2>Explore SAU</h2>
+          <p>Choose a section to learn more about life and learning at the university.</p>
+        </div>
+
+        <div class="link-grid">
+          <a class="section-link" href="https://sau.int/" target="_blank" rel="noopener">
+            <strong>Academics</strong>
+            <span>Explore programmes and faculties →</span>
+          </a>
+
+          <a class="section-link" href="https://sau.int/" target="_blank" rel="noopener">
+            <strong>Admissions</strong>
+            <span>Find information for applicants →</span>
+          </a>
+
+          <a class="section-link" href="#locations">
+            <strong>Campus Life</strong>
+            <span>Discover the student community →</span>
+          </a>
+
+          <a class="section-link" href="https://sau.int/contact/" target="_blank" rel="noopener">
+            <strong>Contact SAU</strong>
+            <span>Get in touch with the university →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>South Asian University · New Delhi, India</p>
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#overview">About</a></li>
+        <li><a href="#locations">Campus Tour</a></li>
+        <li><a href="https://sau.int/" target="_blank" rel="noopener">SAU Website ↗</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
