@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore South Asian University through a virtual campus tour of its community, learning spaces and story.">
+  <meta name="theme-color" content="#1b3a5c">
+  <title>South Asian University | Virtual Campus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="./css/style.css">
+<script src="./js/script.js" defer></script>
+<a href="pages/about.html">About SAU</a>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="utility-bar">
+    <div class="container utility-inner">
+      <span>South Asian University <span aria-hidden="true">·</span> New Delhi, India</span>
+      <a href="https://sau.int/" target="_blank" rel="noopener noreferrer">Visit the official university website <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="container navbar" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="South Asian University virtual campus home">
+        <span class="brand-mark" aria-hidden="true">SAU</span>
+        <span class="brand-copy"><strong>South Asian University</strong><small>Virtual campus · New Delhi</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation"><span></span><span></span></button>
+      <ul class="nav-links" id="primary-navigation">
+        <li><a class="active" aria-current="page" href="index.html">Home</a></li>
+        <li><a href="pages/about.html">About SAU</a></li>
+        <li><a href="#tour">Campus tour</a></li>
+        <li><a href="#discover">Discover</a></li>
+        <li><a class="nav-cta" href="https://sau.int/" target="_blank" rel="noopener noreferrer">Official website <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-image" role="img" aria-label="South Asian University campus in New Delhi"></div>
+      <div class="hero-shade"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow eyebrow-light"><span class="eyebrow-rule"></span> One university · Many perspectives</p>
+          <h1 id="hero-title">A campus shaped<br>by <em>connection.</em></h1>
+          <p class="hero-lede">Step inside South Asian University and discover a community where students, ideas and cultures meet across the region.</p>
+          <div class="hero-actions">
+            <a class="button button-light" href="#tour">Begin the campus tour <span aria-hidden="true">↓</span></a>
+            <a class="hero-text-link" href="pages/about.html">Get to know SAU <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <p class="hero-caption"><span aria-hidden="true">⌖</span> Maidan Garhi · New Delhi, India</p>
+      </div>
+      <div class="hero-index" aria-hidden="true">01 <span></span> 04</div>
+    </section>
+
+    <section class="intro section-space" aria-labelledby="intro-title">
+      <div class="container intro-grid">
+        <div class="intro-label"><span class="eyebrow">A shared academic home</span><span class="intro-index">01 / THE UNIVERSITY</span></div>
+        <div class="intro-content">
+          <h2 id="intro-title">A meeting place for <em>South Asia.</em></h2>
+          <p class="intro-lede">South Asian University brings together students and scholars from across the region in a shared pursuit of learning, research and understanding.</p>
+          <a class="underlined-link" href="pages/about.html">The story of SAU <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="intro-aside"><span class="aside-mark" aria-hidden="true">“</span><p>Different backgrounds. Shared questions. A wider view of the world.</p><span class="aside-rule"></span></div>
+      </div>
+    </section>
+
+    <section class="tour-section section-space" id="tour" aria-labelledby="tour-title">
+      <div class="container">
+        <div class="section-topline"><span class="eyebrow">Explore the campus</span><span class="section-number">02 / TAKE A CLOSER LOOK</span></div>
+        <div class="section-heading-row">
+          <div><h2 id="tour-title">Your campus, <em>at a glance.</em></h2><p class="section-intro">Choose a stop to explore the places and people that make up the SAU experience.</p></div>
+          <button class="theme-toggle" type="button" aria-pressed="false"><span class="theme-icon" aria-hidden="true">◐</span><span class="theme-label">Evening view</span></button>
+        </div>
+
+        <div class="tour-tools">
+          <label class="search-label" for="tour-search">Find a tour stop</label>
+          <div class="search-wrap"><span aria-hidden="true">⌕</span><input id="tour-search" type="search" placeholder="Try clubs, hostel, library, sports…" autocomplete="off"><kbd>/</kbd></div>
+          <p class="result-count" aria-live="polite">Showing <span id="result-count">7</span> tour stops</p>
+        </div>
+
+        <div class="tour-grid" id="tour-grid">
+          <article class="tour-card" data-search="academic campus learning teaching research collaboration faculties">
+            <a class="tour-image image-campus" href="#tour" aria-label="Explore the academic campus"><img src="https://upload.wikimedia.org/wikipedia/commons/5/57/South_asian_university_campus_photo.png" alt="Campus buildings at South Asian University" loading="lazy"><span class="image-count">01 <span>/ 07</span></span></a>
+            <div class="tour-card-body"><div class="card-meta"><span>Learning spaces</span><span class="card-arrow" aria-hidden="true">↗</span></div><h3>Academic campus</h3><p>Discover the shared setting for teaching, study and research.</p><button class="details-button" type="button" data-location="academic">Explore this stop <span aria-hidden="true">→</span></button></div>
+          </article>
+          <article class="tour-card" data-search="campus grounds shared spaces outdoor garden courtyard students meet">
+            <a class="tour-image image-grounds" href="#tour" aria-label="Explore the campus grounds"><img src="https://images.shiksha.com/mediadata/images/1756367150phpbssW4d_g.jpg" alt="Landscaped courtyard between South Asian University hostel buildings" loading="lazy"><span class="image-count">02 <span>/ 07</span></span></a>
+            <div class="tour-card-body"><div class="card-meta"><span>Shared spaces</span><span class="card-arrow" aria-hidden="true">↗</span></div><h3>Campus grounds</h3><p>Get a feel for the surroundings and shared spaces across campus.</p><button class="details-button" type="button" data-location="grounds">Explore this stop <span aria-hidden="true">→</span></button></div>
+          </article>
+          <article class="tour-card" data-search="student community culture perspectives experience south asia students">
+            <a class="tour-image image-community" href="#tour" aria-label="Explore the student community"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Students_of_South_Asian_University%2C_New_Delhi.JPG/1280px-Students_of_South_Asian_University%2C_New_Delhi.JPG" alt="Students celebrating together at South Asian University" loading="lazy"><span class="image-count">03 <span>/ 07</span></span></a>
+            <div class="tour-card-body"><div class="card-meta"><span>People &amp; culture</span><span class="card-arrow" aria-hidden="true">↗</span></div><h3>Student community</h3><p>Meet a community shaped by perspectives from across South Asia.</p><button class="details-button" type="button" data-location="community">Explore this stop <span aria-hidden="true">→</span></button></div>
+          </article>
+          <article class="tour-card" data-search="clubs societies student groups music dance art theatre film photography book club south asia speaks activities">
+            <a class="tour-image image-clubs" href="#tour" aria-label="Explore student clubs and societies"><img src="https://gallery.sau.ac.in/_data/i/galleries/Explorasian---Hostel-Fest-2015/Hostel%20Fest%2013-la.jpg" alt="South Asian University students performing music at the ExplorAsian Hostel Fest" loading="lazy"><span class="image-count">04 <span>/ 07</span></span></a>
+            <div class="tour-card-body"><div class="card-meta"><span>Student life</span><span class="card-arrow" aria-hidden="true">↗</span></div><h3>Clubs &amp; societies</h3><p>Find your people through creative, cultural and interest-based groups.</p><button class="details-button" type="button" data-location="clubs">Explore this stop <span aria-hidden="true">→</span></button></div>
+          </article>
+          <article class="tour-card" data-search="hostel residence accommodation housing dorm room common lounge student living">
+            <a class="tour-image image-hostel" href="#tour" aria-label="Explore student hostel life"><img src="https://sau.int/wp-content/uploads/2026/01/IMG_0162-1-1024x683.jpg" alt="South Asian University hostel building and campus grounds" loading="lazy"><span class="image-count">05 <span>/ 07</span></span></a>
+            <div class="tour-card-body"><div class="card-meta"><span>Living at SAU</span><span class="card-arrow" aria-hidden="true">↗</span></div><h3>Hostel life</h3><p>Shared accommodation with common rooms, study spaces and places to gather.</p><button class="details-button" type="button" data-location="hostel">Explore this stop <span aria-hidden="true">→</span></button><p class="availability-note">Hostel places are limited and depend on availability.</p></div>
+          </article>
+          <article class="tour-card" data-search="library books reading study research resources g k chadha library reading room quiet">
+            <a class="tour-image image-library" href="#tour" aria-label="Explore the university library"><img src="https://files.blogs.illinois.edu/files/6231/349438/86515.jpg" alt="Illustrative university library reading room with long study tables" loading="lazy"><span class="image-count">06 <span>/ 07</span></span></a>
+            <div class="tour-card-body"><div class="card-meta"><span>Study &amp; research</span><span class="card-arrow" aria-hidden="true">↗</span></div><h3>Library</h3><p>Discover the G. K. Chadha Library and its books, journals and digital resources.</p><button class="details-button" type="button" data-location="library">Explore this stop <span aria-hidden="true">→</span></button><p class="availability-note">Photo is illustrative; it is not the SAU library.</p></div>
+          </article>
+          <article class="tour-card" data-search="sports football cricket table tennis chess carrom games fitness playground athletics">
+            <a class="tour-image image-sports" href="#tour" aria-label="Explore sports and recreation"><img src="https://pbs.twimg.com/media/HEvInVyasAANSGz.jpg" alt="South Asian University athletes celebrating after a sports event" loading="lazy"><span class="image-count">07 <span>/ 07</span></span></a>
+            <div class="tour-card-body"><div class="card-meta"><span>Move &amp; play</span><span class="card-arrow" aria-hidden="true">↗</span></div><h3>Sports &amp; recreation</h3><p>Make room for football, cricket, table tennis, chess and time outdoors.</p><button class="details-button" type="button" data-location="sports">Explore this stop <span aria-hidden="true">→</span></button></div>
+          </article>
+        </div>
+        <p class="no-results" id="no-results" hidden>No tour stops match that search. Try another word.</p>
+      </div>
+    </section>
+
+    <section class="discover-section section-space" id="discover" aria-labelledby="discover-title">
+      <div class="container discover-grid">
+        <div class="discover-heading"><div class="section-topline"><span class="eyebrow">Keep exploring</span><span class="section-number">03 / YOUR NEXT STEP</span></div><h2 id="discover-title">Find your way <em>into SAU.</em></h2><p>Explore the university’s official resources for more about study, applications and campus life.</p></div>
+        <div class="discover-links">
+          <a class="discover-link" href="https://sau.int/" target="_blank" rel="noopener noreferrer"><span class="link-index">01</span><span><strong>Academic programmes</strong><small>Explore faculties and areas of study</small></span><span class="link-arrow" aria-hidden="true">↗</span></a>
+          <a class="discover-link" href="https://sau.int/" target="_blank" rel="noopener noreferrer"><span class="link-index">02</span><span><strong>Admissions</strong><small>Information for future students</small></span><span class="link-arrow" aria-hidden="true">↗</span></a>
+          <a class="discover-link" href="pages/about.html#community"><span class="link-index">03</span><span><strong>Community &amp; campus</strong><small>Learn about life at the university</small></span><span class="link-arrow" aria-hidden="true">→</span></a>
+          <a class="discover-link" href="https://sau.int/contact/" target="_blank" rel="noopener noreferrer"><span class="link-index">04</span><span><strong>Contact SAU</strong><small>Get in touch with the university</small></span><span class="link-arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-banner"><div class="container closing-inner"><p class="eyebrow eyebrow-light">A wider view starts here</p><h2>Curiosity has<br><em>no borders.</em></h2><a class="button button-outline" href="pages/about.html">Discover South Asian University <span aria-hidden="true">→</span></a></div><span class="closing-ornament" aria-hidden="true">SAU</span></section>
+  </main>
+
+  <dialog class="location-dialog" aria-labelledby="dialog-title"><button class="dialog-close" type="button" aria-label="Close details">×</button><p class="eyebrow" id="dialog-kicker">Campus tour</p><h2 id="dialog-title">Explore the campus</h2><p id="dialog-copy"></p><a class="underlined-link" href="pages/about.html">Learn more about SAU <span aria-hidden="true">→</span></a></dialog>
+
+  <footer class="site-footer"><div class="container footer-main"><a class="brand brand-footer" href="index.html"><span class="brand-mark" aria-hidden="true">SAU</span><span class="brand-copy"><strong>South Asian University</strong><small>Virtual campus · New Delhi</small></span></a><p class="footer-note">A virtual introduction to the university and its community.</p><ul class="footer-nav"><li><a href="index.html">Home</a></li><li><a href="pages/about.html">About SAU</a></li><li><a href="#tour">Campus tour</a></li><li><a href="https://sau.int/" target="_blank" rel="noopener noreferrer">SAU website ↗</a></li></ul></div><div class="container footer-bottom"><span>South Asian University · New Delhi, India</span><a href="#main">Back to top ↑</a></div></footer>
+</body>
+</html>
